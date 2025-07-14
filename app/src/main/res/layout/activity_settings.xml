@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/black"
+    tools:context=".ui.SettingsActivity">
+
+    <!-- Title of the screen -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Alice Settings"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"/>
+
+    <!-- AI Provider Section -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="AI Provider"
+        android:textColor="@color/alice_blue_light"
+        android:textSize="16sp"/>
+
+    <Spinner
+        android:id="@+id/providerSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edit_text_background"
+        android:padding="4dp" />
+
+    <!-- Gemini API Key Section -->
+    <!-- This entire section will be shown/hidden based on the provider choice -->
+    <LinearLayout
+        android:id="@+id/geminiSettingsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gemini API Key"
+            android:textColor="@color/alice_blue_light"
+            android:textSize="16sp"/>
+
+        <EditText
+            android:id="@+id/apiKeyEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edit_text_background"
+            android:hint="Enter your API key here"
+            android:inputType="textPassword"
+            android:padding="12dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/input_box_hint" />
+
+        <Button
+            android:id="@+id/saveApiKeyButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="8dp"
+            android:text="Save Key"/>
+
+    </LinearLayout>
+
+</LinearLayout>

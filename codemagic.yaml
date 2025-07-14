@@ -1,0 +1,13 @@
+workflows:
+  android-build:
+    name: Build Android APK
+    environment:
+      vars:
+        JAVA_VERSION: 17
+    scripts:
+      - name: Set Gradle permissions
+        script: chmod +x ./gradlew
+      - name: Build Debug APK
+        script: ./gradlew assembleDebug
+    artifacts:
+      - app/build/outputs/**/*.apk

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- 
+    Base application theme. 
+    We inherit from a modern Material Design theme and tell it to have no top Action Bar.
+    -->
+    <style name="Theme.MyApplication1" parent="Theme.Material3.DayNight.NoActionBar">
+        
+        <!-- This makes the status bar transparent for a full-screen immersive feel -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        
+        <!-- This ensures the layout goes behind the status bar -->
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        
+    </style>
+    
+</resources>

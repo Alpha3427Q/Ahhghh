@@ -1,0 +1,12 @@
+<resources>
+    <!-- The official name of our application -->
+    <string name="app_name">Alice</string>
+
+    <!-- UI Hints and Content Descriptions -->
+    <string name="user_input_hint">Ask Alice...</string>
+    <string name="send_button_description">Send message</string>
+    <string name="attachment_button_description">Attach a file</string>
+    <string name="mic_button_description">Start live conversation</string>
+    <string name="close_button_description">Close</string>
+
+</resources>
