@@ -6,7 +6,7 @@ jobs:
   build:
     runs-on: ubuntu-24.04-arm
     steps:
-      - uses: armbian/build@main
+      - uses: armbian/build@v25.05
         with:
           armbian_token: ${{ secrets.GITHUB_TOKEN }}
           armbian_target: "build"
