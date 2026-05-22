@@ -12,6 +12,6 @@ jobs:
           armbian_target: "build"
           armbian_board: "radxa-cubie-a5e"
           armbian_kernel_branch: "current"
-          armbian_release: "bookworm"
+          armbian_release: "noble"
           armbian_ui: "xfce"
           
