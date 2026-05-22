@@ -1,0 +1,13 @@
+name: Build Armbian CLI
+on: workflow_dispatch
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: armbian/build@main
+        with:
+          armbian_token: ${{ secrets.GITHUB_TOKEN }}
+          armbian_board: "radxa-cubie-a5e"
+          armbian_kernel_branch: "current"
+          armbian_release: "bookworm"
+          armbian_ui: "minimal"
