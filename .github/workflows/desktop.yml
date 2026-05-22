@@ -7,10 +7,14 @@ jobs:
     runs-on: ubuntu-24.04-arm
     steps:
       - uses: armbian/build@main
+        env:
+          BUILD_DESKTOP: "yes"
+          BUILD_MINIMAL: "no"
+          DESKTOP_ENVIRONMENT: "xfce"
+          DESKTOP_ENVIRONMENT_CONFIG_NAME: "config_base"
         with:
           armbian_token: ${{ secrets.GITHUB_TOKEN }}
           armbian_target: "build"
           armbian_board: "radxa-cubie-a5e"
           armbian_kernel_branch: "current"
           armbian_release: "bookworm"
-          armbian_ui: "xfce"
